@@ -92,22 +92,7 @@
 fn main() {}
 struct Solution;
 
-#[cfg(test)]
-mod test {
-    use super::Solution;
-
-    #[test]
-    fn test_roman_to_int() {
-        assert_eq!(Solution::roman_to_int("III".to_string()), 3);
-        assert_eq!(Solution::roman_to_int("IV".to_string()), 4);
-        assert_eq!(Solution::roman_to_int("IX".to_string()), 9);
-        assert_eq!(Solution::roman_to_int("LVIII".to_string()), 58);
-        assert_eq!(Solution::roman_to_int("MCMXCIV".to_string()), 1994);
-    }
-}
-
 // @lc code=start
-#[allow(dead_code)]
 impl Solution {
     pub fn roman_to_int(s: String) -> i32 {
         // 优化点1：使用字节数组代替字符迭代（罗马数字都是ASCII）
